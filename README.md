@@ -34,7 +34,7 @@ npm i fusionapi
 
 ### Login
 ```js
-const { FusionApp } = require("./index.js")
+const { FusionApp } = require("fusionapi")
 var  App = new  FusionApp("APPID")
 
 App.Login("username", "Password123/").then(loginResponse => {
@@ -48,7 +48,7 @@ App.Login("username", "Password123/").then(loginResponse => {
 
 ### Register
 ```js
-const { FusionApp } = require("./index.js")
+const { FusionApp } = require("fusionapi")
 var  App = new  FusionApp("APPID")
 
 App.Register("username", "Password123/", "TOKEN").then(registerResponse => {
@@ -62,7 +62,7 @@ App.Register("username", "Password123/", "TOKEN").then(registerResponse => {
 
 ### Check 2FA
 ```js
-const { FusionApp } = require("./index.js")
+const { FusionApp } = require("fusionapi")
 var  App = new  FusionApp("APPID")
 
 App.Has2FA("username").then(h2faResponse => {
@@ -76,7 +76,7 @@ App.Has2FA("username").then(h2faResponse => {
 
 ### Get App Vars
 ```js
-const { FusionApp } = require("./index.js")
+const { FusionApp } = require("fusionapi")
 var  App = new  FusionApp("APPID")
 
 App.Login("username", "Password123/").then(loginResponse => {
@@ -99,7 +99,7 @@ App.Login("username", "Password123/").then(loginResponse => {
 
 ### Set User Vars
 ```js
-const { FusionApp } = require("./index.js")
+const { FusionApp } = require("fusionapi")
 var  App = new  FusionApp("APPID")
 
 App.Register("username", "Password123/", "TOKEN").then(registerResponse => {
