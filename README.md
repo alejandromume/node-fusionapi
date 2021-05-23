@@ -102,15 +102,21 @@ App.Login("username", "Password123/").then(loginResponse => {
 const { FusionApp } = require("fusionapi")
 var  App = new  FusionApp("APPID")
 
-App.Register("username", "Password123/", "TOKEN").then(registerResponse => {
-	if(registerResponse.error == false){
+App.Login("username", "Password123/").then(loginResponse => {
+	if(loginResponse.error == false){
 	
-		App.SetUserVars("varName", "varValue").then(userVarResponse => {
-			console.log(userVarResponse);
+		App.GetAppVars().then(appVars => {
+			if(appVars.error == false){
+				App.SetUserVars("varName", "varValue").then(userVarResponse => {
+			        console.log(userVarResponse);
+		        })
+			}else{
+				console.log(appVars.message);
+			}
 		})
 		
 	}else{
-		console.log(registerResponse.message);
+		console.log(loginResponse.message);
 	}
 })
 ```
