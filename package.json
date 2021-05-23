@@ -1,0 +1,21 @@
+{
+  "name": "fusionapi",
+  "version": "1.0.0",
+  "description": "The original FusionAPI C# package bringed to JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["fusionapi", "auth", "login", "users"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://https://github.com/alejandromume/node-fusionapi.git"
+  }
+  
+}
+
