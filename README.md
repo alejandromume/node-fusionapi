@@ -1,7 +1,7 @@
 # FusionAPI for NodeJS
 
 ## <ins>Introduction 
-* This is the original FusionAPI `C#` package bringed to `JavaScript`.
+* This is the original FusionAPI `C#` package brought to `JavaScript`.
 * Website: https://fusionapi.dev/
 * Official repo: https://github.com/FusionAPI/FusionAPI-CSharp
 
@@ -104,20 +104,15 @@ var  App = new  FusionApp("APPID")
 
 App.Login("username", "Password123/").then(loginResponse => {
 	if(loginResponse.error == false){
-	
-		App.GetAppVars().then(appVars => {
-			if(appVars.error == false){
-				App.SetUserVars("varName", "varValue").then(userVarResponse => {
-			        console.log(userVarResponse);
-		        })
-			}else{
-				console.log(appVars.message);
-			}
-		})
-		
+
+        App.SetUserVars("varName", "varValue").then(userVarResponse => {
+            console.log(userVarResponse);
+        })
+    
 	}else{
 		console.log(loginResponse.message);
 	}
+
 })
 ```
 
