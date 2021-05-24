@@ -60,6 +60,25 @@ App.Register("username", "Password123/", "TOKEN").then(registerResponse => {
 })
 ```
 
+### Reset Password
+```js
+App.Login("username", "Password123/").then(data => {
+    if(loginResponse.error == false){
+        
+        App.ResetPassword("myOldPassword", "myNewPassword").then(resetResponse => {
+            if(resetResponse.error == false){
+                console.log(resetResponse.vars);
+            }else{
+                console.log(resetResponse.message);
+            }
+        })
+
+    }else{
+        console.log(loginResponse.message);
+    }
+})
+```
+	
 ### Check 2FA
 ```js
 const { FusionApp } = require("fusionapi")
@@ -115,4 +134,24 @@ App.Login("username", "Password123/").then(loginResponse => {
 
 })
 ```
+	
+### Get User Vars
+```js
+const { FusionApp } = require("fusionapi")
+var  App = new  FusionApp("APPID")
+
+App.Login("username", "Password123/").then(loginResponse => {
+	if(loginResponse.error == false){
+
+        App.MyVars("varName", "varValue").then(userVarResponse => {
+            console.log(userVarResponse);
+        })
+    
+	}else{
+		console.log(loginResponse.message);
+	}
+
+})
+```
+
 
